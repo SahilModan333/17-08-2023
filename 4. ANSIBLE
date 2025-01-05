@@ -42,6 +42,14 @@ sudo -i
 
 passwd root
 vim /etc/ssh/sshd_config  (38 uncomment, 63 no=yes)
+
+# Allow root login
+PermitRootLogin yes
+
+# Ensure password authentication is enabled
+PasswordAuthentication yes
+
+
 systemctl restart sshd
 systemctl status sshd
 
